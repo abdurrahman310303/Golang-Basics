@@ -10,7 +10,6 @@ func main() {
     var isStudent bool = true
     city := "Lahore"
 
-    // Print the variables
     fmt.Println("Name: ",name)
 	fmt.Println("Age: ",age)
 	fmt.Println("Height: ",height)
