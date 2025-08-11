@@ -5,8 +5,6 @@ import "fmt"
 func main() {
 	fmt.Println("=== GO DATA STRUCTURES DEMO ===\n")
 
-	
-
 	fmt.Println("1. ARRAYS:")
 	fmt.Println("-----------")
 
@@ -33,7 +31,6 @@ func main() {
 
 	fmt.Println()
 
-
 	fmt.Println("2. SLICES (Dynamic Arrays):")
 	fmt.Println("-----------------------------")
 
@@ -44,10 +41,10 @@ func main() {
 	fmt.Println("Fruits slice:", fruits, "Length:", len(fruits), "Capacity:", cap(fruits))
 
 	numbersArray := [5]int{1, 2, 3, 4, 5}
-	sliceFromArray := numbersArray[1:4] 
+	sliceFromArray := numbersArray[1:4]
 	fmt.Println("Slice from array:", sliceFromArray)
 
-	dynamicSlice := make([]int, 3, 5) 
+	dynamicSlice := make([]int, 3, 5)
 	fmt.Println("Dynamic slice:", dynamicSlice, "Length:", len(dynamicSlice), "Capacity:", cap(dynamicSlice))
 
 	fruits = append(fruits, "grape")
@@ -74,7 +71,6 @@ func main() {
 	fmt.Println("Original unchanged:", original)
 
 	fmt.Println()
-
 
 	fmt.Println("3. MAPS (Key-Value Pairs):")
 	fmt.Println("----------------------------")
@@ -120,16 +116,15 @@ func main() {
 	}
 
 	studentInfo := map[string]interface{}{
-		"name":    "John",
-		"age":     20,
-		"grades":  []int{85, 92, 78},
-		"active":  true,
-		"height":  175.5,
+		"name":   "John",
+		"age":    20,
+		"grades": []int{85, 92, 78},
+		"active": true,
+		"height": 175.5,
 	}
 	fmt.Println("Student info:", studentInfo)
 
 	fmt.Println()
-
 
 	fmt.Println("4. PRACTICAL EXAMPLES:")
 	fmt.Println("-----------------------")
@@ -180,16 +175,16 @@ func main() {
 		price := details["price"].(float64)
 		category := details["category"].(string)
 		totalValue := float64(quantity) * price
-		fmt.Printf("%s (%s): %d units, $%.2f each, Total: $%.2f\n", 
+		fmt.Printf("%s (%s): %d units, $%.2f each, Total: $%.2f\n",
 			item, category, quantity, price, totalValue)
 	}
 
 	fmt.Println()
 
 	fmt.Println("Data Processing Pipeline:")
-	
+
 	rawData := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	
+
 	var evenNumbers []int
 	for _, num := range rawData {
 		if num%2 == 0 {
@@ -197,13 +192,13 @@ func main() {
 		}
 	}
 	fmt.Println("Even numbers:", evenNumbers)
-	
+
 	var squaredNumbers []int
 	for _, num := range evenNumbers {
 		squaredNumbers = append(squaredNumbers, num*num)
 	}
 	fmt.Println("Squared numbers:", squaredNumbers)
-	
+
 	sum := 0
 	for _, num := range squaredNumbers {
 		sum += num
@@ -211,4 +206,4 @@ func main() {
 	fmt.Println("Sum of squared even numbers:", sum)
 
 	fmt.Println("\n=== END OF DATA STRUCTURES DEMO ===")
-} 
+}
